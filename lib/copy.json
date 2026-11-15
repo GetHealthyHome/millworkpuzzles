@@ -1,0 +1,539 @@
+{
+  "_meta": {
+    "version": "0.1-draft",
+    "updated": "2026-11-14",
+    "voice": "Authoritative, collector-focused, curatorial. Sentence case for headlines and UI. Mono strings (key ends in _mono) are ALL CAPS and render in IBM Plex Mono with tabular numerals.",
+    "placeholders": "Anything in [SQUARE BRACKETS] is a placeholder to replace before launch. Testimonials marked placeholder:true are invented and must be replaced with real collector quotes."
+  },
+  "global": {
+    "brand": "Millwork Puzzles",
+    "domain": "millworkpuzzles.com",
+    "tagline": "Hardwood puzzles, in numbered editions.",
+    "nav": [
+      "Current drop",
+      "Archive",
+      "Artists",
+      "The workshop",
+      "Collector registry"
+    ],
+    "nav_cta": "Acquire edition",
+    "audio_toggle": {
+      "on": "Sound on",
+      "off": "Sound off",
+      "aria": "Toggle workshop sound"
+    },
+    "cart_label": "Ledger",
+    "skip_link": "Skip to content"
+  },
+  "teaser": {
+    "eyebrow_mono": "INAUGURAL DROP · [SEASON YEAR]",
+    "headline": "Precision-cut, in limited number.",
+    "subhead": "Millwork Puzzles cuts heirloom works from 1/4\" and 1/2\" hardwood. Each work is released once, in an edition of 25 to 100, and never reissued.",
+    "craft_preview": [
+      {
+        "index_mono": "01",
+        "title": "The substrate",
+        "body": "Solid hardwood, sanded to a soft edge. Heavy enough to feel deliberate in the hand."
+      },
+      {
+        "index_mono": "02",
+        "title": "The cut",
+        "body": "A clean, uncharred kerf. Pieces seat with a quiet, exact click."
+      },
+      {
+        "index_mono": "03",
+        "title": "The edition",
+        "body": "Numbered, boxed and certified. Once an edition is gone, it enters the archive."
+      }
+    ],
+    "capture": {
+      "label": "Email address",
+      "placeholder": "you@example.com",
+      "cta": "Request inaugural drop access",
+      "helper": "One note when the first edition opens. Nothing else.",
+      "success": "You're on the list. We'll write when Edition 001 is ready.",
+      "error_invalid": "Please enter a valid email address.",
+      "error_generic": "Something went wrong. Please try again."
+    },
+    "footer_note": "Made by hand in [WORKSHOP LOCATION]."
+  },
+  "home": {
+    "hero": {
+      "eyebrow_mono": "EDITION 001 / [EDITION SIZE] · NOW AVAILABLE",
+      "headline": "Art, held in hardwood.",
+      "subhead": "Numbered puzzles made from 1/2\" hardwood, cut with precision and released in strictly limited editions.",
+      "cta_primary": "View the current drop",
+      "cta_secondary": "Explore the archive",
+      "scroll_hint": "Scroll to see the layers"
+    },
+    "layers": {
+      "headline": "Four layers, one object.",
+      "items": [
+        {
+          "index_mono": "01",
+          "label": "The print",
+          "body": "Matte UV ink set directly into the wood. The grain stays visible beneath the image."
+        },
+        {
+          "index_mono": "02",
+          "label": "The cut grid",
+          "body": "Every line drawn for this work alone, then laser-cut with no charred edges."
+        },
+        {
+          "index_mono": "03",
+          "label": "The whimsies",
+          "body": "Custom silhouettes hidden in the field, each one drawn from the artwork itself."
+        },
+        {
+          "index_mono": "04",
+          "label": "The substrate",
+          "body": "1/2\" solid hardwood. The weight is the first thing collectors notice."
+        }
+      ]
+    },
+    "current_drop": {
+      "eyebrow_mono": "CURRENT DROP",
+      "headline": "The Great Wave, after Hokusai",
+      "artist_line": "After Katsushika Hokusai",
+      "remaining_mono": "[NNN] / [NNN] REMAINING",
+      "price": "From $[PRICE]",
+      "cta": "View edition"
+    },
+    "model": {
+      "headline": "Released once. Kept for good.",
+      "body": "Each season we release a small number of works, each in an edition of 25 to 100. Once a year, a single 1-of-1 commission. Nothing is reprinted. When an edition sells out, it moves to the permanent archive.",
+      "stats": [
+        {
+          "value_mono": "25–100",
+          "label": "Pieces per edition"
+        },
+        {
+          "value_mono": "1/1",
+          "label": "Annual commission"
+        },
+        {
+          "value_mono": "0",
+          "label": "Reprints, ever"
+        }
+      ]
+    },
+    "craft": {
+      "eyebrow_mono": "THE WORKSHOP",
+      "headline": "Made the slow way.",
+      "body": "Every Millwork puzzle starts as a plank. We print, cut, sand, inspect and box each one by hand in our workshop. Tolerances are measured, not guessed. If a piece doesn't seat cleanly, it doesn't ship.",
+      "cta": "Inside the workshop"
+    },
+    "archive_teaser": {
+      "headline": "The archive",
+      "body": "Every edition we've released, documented in full. Sold-out works stay here as a permanent record.",
+      "sold_out_mono": "SOLD OUT",
+      "cta": "Browse the archive"
+    },
+    "registry_teaser": {
+      "headline": "Your certificate opens the registry.",
+      "body": "Register the serial on your Certificate of Authenticity to join the Collector Registry for 12 months: early access to drops, provenance records, and invitations to commission.",
+      "cta": "About the registry"
+    },
+    "newsletter": {
+      "headline": "Hear about the next drop first.",
+      "cta": "Notify me",
+      "helper": "A short note before each release. Unsubscribe any time."
+    }
+  },
+  "product_sample": {
+    "_note": "Sample PDP. Working title for Edition 001 is PENDING ANDE'S APPROVAL (from the edition plan). Swap bracketed values per work.",
+    "title": "The Great Wave, after Hokusai",
+    "artist": "Katsushika Hokusai",
+    "artist_link": "More on Hokusai and the woodblock tradition",
+    "edition_mono": "EDITION [NNN] / [NNN]",
+    "remaining_mono": "[NNN] / [NNN] REMAINING",
+    "price": "$[PRICE]",
+    "specs_inline_mono": [
+      "[512] PCS",
+      "1/2\" HARDWOOD",
+      "[18 × 24] IN"
+    ],
+    "thickness_option": {
+      "label": "Slab depth",
+      "options": [
+        {
+          "value": "quarter",
+          "label_mono": "1/4\" HARDWOOD",
+          "note": "Lighter, finer profile"
+        },
+        {
+          "value": "half",
+          "label_mono": "1/2\" HARDWOOD",
+          "note": "Our signature weight"
+        }
+      ]
+    },
+    "backing_option": {
+      "label": "Reverse",
+      "options": [
+        {
+          "value": "veneer",
+          "label": "Exotic hardwood veneer"
+        },
+        {
+          "value": "velvet",
+          "label": "Velvet backing"
+        }
+      ]
+    },
+    "cta_primary": "Acquire edition",
+    "cta_sold_out": "Edition sold out",
+    "cta_sold_out_secondary": "View in archive",
+    "low_stock_mono": "FINAL [N] OF THE EDITION",
+    "shipping_note": "Ships in [5–7] business days, insured and signature-required.",
+    "addons": {
+      "heading": "Workshop add-ons",
+      "helper": "Made to accompany this edition.",
+      "items": [
+        {
+          "id": "frame",
+          "name": "Magnetic display frame",
+          "desc": "Hold the finished work on the wall, and take it down to solve again.",
+          "price": "$[PRICE]"
+        },
+        {
+          "id": "tray",
+          "name": "Milled sorting trays",
+          "desc": "A set of four hardwood trays for edges, sky, and everything in between.",
+          "price": "$[PRICE]"
+        },
+        {
+          "id": "whimsy",
+          "name": "Custom whimsy piece",
+          "desc": "A silhouette of your choosing, cut into your edition.",
+          "price": "$[PRICE]"
+        },
+        {
+          "id": "plaque",
+          "name": "Engraved plaque",
+          "desc": "A brass plaque with your name, a date, or a line of your choosing.",
+          "price": "$[PRICE]"
+        },
+        {
+          "id": "stand",
+          "name": "Gallery easel",
+          "desc": "A low hardwood stand for display on a shelf or desk.",
+          "price": "$[PRICE]"
+        },
+        {
+          "id": "mount",
+          "name": "Archival mounting kit",
+          "desc": "For collectors who prefer a permanent, framed finish.",
+          "price": "$[PRICE]"
+        }
+      ]
+    },
+    "personalize": {
+      "heading": "+ Personalize edition",
+      "engraving_label": "Engraving on the box lid",
+      "engraving_placeholder": "Up to [40] characters",
+      "engraving_helper": "Engraved by hand. Personalized editions are final sale.",
+      "gift_heading": "Gift presentation",
+      "gift_toggle": "This is a gift",
+      "gift_note_label": "Gift note",
+      "gift_note_placeholder": "Handwritten on a card inside the box",
+      "gift_price_hide": "Leave prices off the packing slip"
+    },
+    "pins": [
+      {
+        "index_mono": "01",
+        "title": "1/2\" slab depth",
+        "body": "Solid hardwood, twice the thickness of a typical wooden puzzle."
+      },
+      {
+        "index_mono": "02",
+        "title": "Uncharred kerf",
+        "body": "Our cut leaves a clean, pale edge. No scorch, no smell of smoke."
+      },
+      {
+        "index_mono": "03",
+        "title": "Direct-to-wood print",
+        "body": "Matte UV ink sits in the grain, not on top of it. No glare, no lamination."
+      },
+      {
+        "index_mono": "04",
+        "title": "Exotic veneer",
+        "body": "Turn it over to find a figured hardwood back, chosen for each edition."
+      }
+    ],
+    "whimsy_pullout": {
+      "eyebrow_mono": "WHIMSIES",
+      "headline": "Hidden in the field.",
+      "body": "Each work holds [N] custom whimsy pieces, drawn from shapes in the artwork itself. Scroll to lift them out.",
+      "callouts": [
+        {
+          "index_mono": "01",
+          "label": "Mount Fuji",
+          "note": "The still point of the image, small and snow-capped between the wave's arms."
+        },
+        {
+          "index_mono": "02",
+          "label": "The boatmen",
+          "note": "Three rowing crews bent low beneath the crest."
+        },
+        {
+          "index_mono": "03",
+          "label": "The claw of foam",
+          "note": "The breaking spray, cut as its own grasping silhouette."
+        }
+      ],
+      "reduced_motion_note": "Whimsy pieces shown in place. Select a number to inspect each one."
+    },
+    "inspector": {
+      "headline": "Turn it over.",
+      "body": "Inspect the reverse and the true thickness of each option.",
+      "toggle_front": "Front",
+      "toggle_back": "Reverse",
+      "cross_section_label": "Cross-section, actual proportion",
+      "quarter_mono": "1/4\" · 6.35 MM",
+      "half_mono": "1/2\" · 12.7 MM"
+    },
+    "spec_matrix": {
+      "heading": "Specifications",
+      "rows": [
+        {
+          "label_mono": "EDITION",
+          "value": "[NNN] numbered pieces, never reissued"
+        },
+        {
+          "label_mono": "PIECES",
+          "value": "[512], including [N] whimsies"
+        },
+        {
+          "label_mono": "DIMENSIONS",
+          "value": "[18 × 24] in assembled"
+        },
+        {
+          "label_mono": "SUBSTRATE",
+          "value": "1/4\" or 1/2\" solid [SPECIES] hardwood"
+        },
+        {
+          "label_mono": "PRINT",
+          "value": "Matte UV, direct to wood"
+        },
+        {
+          "label_mono": "CUT",
+          "value": "Laser-cut, uncharred kerf"
+        },
+        {
+          "label_mono": "REVERSE",
+          "value": "[SPECIES] veneer or velvet"
+        },
+        {
+          "label_mono": "PRESENTATION",
+          "value": "Numbered wooden box, velvet pouch, COA"
+        },
+        {
+          "label_mono": "MADE IN",
+          "value": "[WORKSHOP LOCATION]"
+        }
+      ],
+      "makers_mark_caption": "Every piece carries the workshop's mark."
+    },
+    "provenance": {
+      "heading": "Box, pouch and certificate.",
+      "body": "Each edition arrives in a wooden keepsake box engraved with its number. The pieces rest in a velvet drawstring pouch. Inside the lid, a Certificate of Authenticity records the work, the artist, the edition number and a unique serial.",
+      "items": [
+        {
+          "label": "Numbered wooden box",
+          "detail": "Engraved with your edition number."
+        },
+        {
+          "label": "Velvet pouch",
+          "detail": "Holds every piece between solves."
+        },
+        {
+          "label": "Certificate of Authenticity",
+          "detail": "Signed and serialized. Register it to join the Collector Registry."
+        }
+      ]
+    },
+    "curatorial_note": {
+      "heading": "Curatorial note",
+      "body": "Katsushika Hokusai made The Great Wave off Kanagawa around 1831 as a woodblock print, part of his series Thirty-six Views of Mount Fuji. A wall of water curls over three fishing boats, and in the distance, almost an afterthought, sits Fuji itself. We chose it for the way it rewards close looking: the foam breaks into small clawed fingers, and the deep Prussian blue shifts from crest to trough. Solving it is a slow study of the same image, region by region, until the whole returns.\n\nThe print was made to be reproduced. Carved into woodblocks and pulled by hand, it was meant to travel. Returning it to wood feels less like an adaptation than a homecoming.",
+      "link": "More on Hokusai and the woodblock tradition",
+      "pending_approval": true
+    },
+    "testimonials": {
+      "heading": "From collectors",
+      "items": [
+        {
+          "placeholder": true,
+          "quote": "The weight surprised me first. Then the click of every piece. It lives on the dining table now.",
+          "attribution_mono": "COLLECTOR · EDITION 012 / 050"
+        },
+        {
+          "placeholder": true,
+          "quote": "I bought it as art and solved it as a puzzle. It works as both, which is rare.",
+          "attribution_mono": "COLLECTOR · EDITION 031 / 050"
+        },
+        {
+          "placeholder": true,
+          "quote": "The box alone could sit on a shelf. Registering the certificate felt like signing a ledger.",
+          "attribution_mono": "COLLECTOR · EDITION 007 / 025"
+        }
+      ]
+    }
+  },
+  "cart": {
+    "title": "Ledger",
+    "close": "Close",
+    "empty": "Your ledger is empty.",
+    "empty_cta": "View the current drop",
+    "reserved_mono": "RESERVED FOR [15]:00",
+    "reserved_helper": "Your edition number is held while you check out.",
+    "reservation_expired": "Your reservation has lapsed. The edition has returned to the drop.",
+    "edition_line_mono": "EDITION [NNN] / [NNN]",
+    "addons_label": "Workshop add-ons",
+    "note_label": "Engraving and gift note",
+    "edit": "Edit",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "shipping_note": "Insured shipping and taxes calculated at checkout.",
+    "cta": "Proceed to checkout",
+    "limit_notice": "One edition per collector per work."
+  },
+  "checkout": {
+    "steps": [
+      "Contact",
+      "Delivery",
+      "Payment",
+      "Review"
+    ],
+    "contact_heading": "Contact",
+    "email_helper": "Your certificate serial and shipping updates will be sent here.",
+    "delivery_heading": "Delivery",
+    "delivery_note": "All editions ship insured and require a signature on arrival.",
+    "payment_heading": "Payment",
+    "payment_secure": "Payments are encrypted and processed securely.",
+    "review_heading": "Review your acquisition",
+    "place_order": "Complete acquisition",
+    "processing": "Recording your edition…",
+    "errors": {
+      "card_declined": "Your card was declined. Please try another payment method.",
+      "edition_gone": "We're sorry. The last number in this edition was acquired before checkout finished. You have not been charged.",
+      "generic": "Something went wrong. You have not been charged. Please try again."
+    },
+    "confirmation": {
+      "eyebrow_mono": "ACQUISITION CONFIRMED",
+      "headline": "Edition [NNN] / [NNN] is yours.",
+      "body": "We've begun preparing your edition in the workshop. You'll receive a shipping notice with tracking within [5–7] business days.",
+      "next_heading": "When it arrives",
+      "next_body": "Find the Certificate of Authenticity inside the lid of the box. Register its serial to join the Collector Registry.",
+      "order_number_mono": "ORDER [#XXXXXX]",
+      "cta": "Continue browsing"
+    }
+  },
+  "registry": {
+    "eyebrow_mono": "COLLECTOR REGISTRY",
+    "headline": "A record of every work, and who keeps it.",
+    "intro": "Each Millwork edition carries a numbered Certificate of Authenticity. Registering it adds your edition to our provenance ledger and opens 12 months of Collector Registry access.",
+    "benefits_heading": "What registration opens",
+    "benefits": [
+      {
+        "index_mono": "01",
+        "title": "Early access",
+        "body": "Registered collectors see each new drop [48] hours before public release."
+      },
+      {
+        "index_mono": "02",
+        "title": "Provenance record",
+        "body": "Your edition is recorded by number in our permanent ledger, for insurance, gifting or resale."
+      },
+      {
+        "index_mono": "03",
+        "title": "Commission invitations",
+        "body": "Each year, one collector is invited to commission a 1-of-1 work with a Millwork artist."
+      },
+      {
+        "index_mono": "04",
+        "title": "Workshop notes",
+        "body": "Occasional letters from the bench: new species, new artists, works in progress."
+      }
+    ],
+    "form": {
+      "heading": "Register your certificate",
+      "serial_label": "Certificate serial",
+      "serial_placeholder": "MW-XXXX-XXXX",
+      "serial_helper": "Printed on the lower edge of your certificate.",
+      "email_label": "Email address",
+      "name_label": "Name for the ledger",
+      "name_helper": "Shown only to you unless you choose otherwise.",
+      "cta": "Register edition",
+      "success_headline": "Edition [NNN] / [NNN] is registered.",
+      "success_body": "Your Collector Registry access runs until [DATE]. We'll write before each drop opens.",
+      "error_invalid": "We couldn't find that serial. Check the certificate and try again.",
+      "error_claimed": "This certificate is already registered. If the edition has changed hands, contact us to transfer it.",
+      "renewal_note": "Access renews for another 12 months with each new edition you register."
+    },
+    "login": {
+      "heading": "Already registered?",
+      "cta": "Sign in to the registry"
+    },
+    "faq": [
+      {
+        "q": "I received a Millwork puzzle as a gift. Can I register it?",
+        "a": "Yes. The registry follows the certificate, not the receipt."
+      },
+      {
+        "q": "Can I transfer a registration?",
+        "a": "Yes. If you sell or give an edition, contact us and we'll record the new keeper in the ledger."
+      },
+      {
+        "q": "What happens after 12 months?",
+        "a": "Your provenance record stays permanently. Early access and invitations pause until you register another edition."
+      }
+    ]
+  },
+  "footer": {
+    "manifesto": "We believe a puzzle can be an object worth keeping. So we make few of them, and we make them well: solid hardwood, a clean cut, an image chosen with care. Each work is released once and numbered by hand. When it is gone, it is gone, and the people who hold it become part of its record.",
+    "signoff": "The Millwork Puzzles workshop",
+    "columns": [
+      {
+        "heading": "Collect",
+        "links": [
+          "Current drop",
+          "Archive",
+          "Artists",
+          "Gift an edition"
+        ]
+      },
+      {
+        "heading": "Registry",
+        "links": [
+          "Register a certificate",
+          "Sign in",
+          "Transfer an edition"
+        ]
+      },
+      {
+        "heading": "Workshop",
+        "links": [
+          "Our process",
+          "Care and storage",
+          "Journal"
+        ]
+      },
+      {
+        "heading": "Support",
+        "links": [
+          "Shipping and returns",
+          "Contact",
+          "FAQ"
+        ]
+      }
+    ],
+    "newsletter_label": "Notes before each drop",
+    "newsletter_cta": "Subscribe",
+    "legal": "© [YEAR] Millwork Puzzles. All rights reserved.",
+    "legal_links": [
+      "Privacy",
+      "Terms"
+    ]
+  }
+}
