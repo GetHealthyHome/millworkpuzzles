@@ -4,7 +4,7 @@ Domains: millworkpuzzles.com (canonical), millworkpuzzle.com (redirect).
 
 Next.js 15 (App Router, JS). `npm i && npm run dev` → http://localhost:3000
 
-- `/` pre-launch page with email signup (Supabase `waitlist`, see supabase/waitlist.sql and .env.example)
+- `/` pre-launch page with email signup: `app/api/subscribe` adds the email to Shopify customers with marketing consent (env vars in .env.example)
 - `/preview/` store prototype homepage (removed from production builds; noindex)
 - `/preview/editions/quiet-meridian/` product page (whimsy pull-out, feature pins, thickness inspector, spec matrix, cart drawer)
 

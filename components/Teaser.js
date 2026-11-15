@@ -4,8 +4,6 @@ import { useRef, useState } from 'react';
 import { ArtLayers } from './Art';
 import { useReducedMotion, useScrollProgress, clamp01, easeOut } from './hooks';
 
-const KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
-
 export function EmailCapture() {
   const [email, setEmail] = useState('');
   const [state, setState] = useState('idle');
@@ -15,13 +13,12 @@ export function EmailCapture() {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)) return setState('bad');
     setState('sending');
     try {
-      // Supabase REST insert with the publishable key; RLS allows insert only (supabase/waitlist.sql).
-      const res = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/waitlist`, {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
-        headers: { apikey: KEY, Authorization: `Bearer ${KEY}`, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
-        body: JSON.stringify({ email: clean, source: 'teaser' }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: clean, company: e.target.company.value }),
       });
-      setState(res.ok || res.status === 409 ? 'ok' : 'error'); // 409 = already on the list
+      setState(res.ok ? 'ok' : res.status === 400 ? 'bad' : 'error');
     } catch {
       setState('error');
     }
@@ -29,6 +26,8 @@ export function EmailCapture() {
   if (state === 'ok') return <p className="mono" role="status" style={{ marginTop: 32 }}>{copy.teaser.capture.success}</p>;
   return (
     <form onSubmit={submit} noValidate>
+      {/* honeypot: hidden from people, bots fill it in */}
+      <input name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }} />
       <div className="capture">
         <label htmlFor="email" className="sr-only">Email address</label>
         <input id="email" type="email" className="input" placeholder={copy.teaser.capture.placeholder} value={email} onChange={(e) => setEmail(e.target.value)} aria-invalid={state === 'bad'} aria-describedby="email-msg" autoComplete="email" />
