@@ -4,9 +4,9 @@ Domains: millworkpuzzles.com (canonical), millworkpuzzle.com (redirect).
 
 Next.js 15 (App Router, JS). `npm i && npm run dev` → http://localhost:3000
 
-- `/` homepage with scroll-driven exploded hero
-- `/editions/quiet-meridian/` product page (whimsy pull-out, feature pins, thickness inspector, spec matrix, cart drawer)
-- `/teaser/` pre-launch page with email capture
+- `/` pre-launch page with email signup (Supabase `waitlist`, see supabase/waitlist.sql and .env.example)
+- `/preview/` store prototype homepage (removed from production builds; noindex)
+- `/preview/editions/quiet-meridian/` product page (whimsy pull-out, feature pins, thickness inspector, spec matrix, cart drawer)
 
 Swap points (stubs):
 - `lib/data.js` — all editions, prices, add-ons, pins, whimsy shapes, quotes. Copy/commerce threads replace values here.

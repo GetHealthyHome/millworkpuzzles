@@ -51,7 +51,7 @@ export default function ExplodedHero({ edition }) {
           <span className="mono eyebrow">{edition.drop} · Edition of {String(edition.size).padStart(3, '0')}</span>
           <h1>{copy.home.hero.headline}</h1>
           <p style={{ fontSize: 18, maxWidth: 440 }}>{copy.home.hero.subhead}</p>
-          <Link href={`/editions/${edition.slug}/`} className="btn btn-primary" style={{ marginTop: 16 }}>{copy.home.hero.cta_primary}</Link>
+          <Link href={`/preview/editions/${edition.slug}/`} className="btn btn-primary" style={{ marginTop: 16 }}>{copy.home.hero.cta_primary}</Link>
         </div>
       </div>
     </section>

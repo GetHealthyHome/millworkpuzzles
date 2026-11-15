@@ -4,13 +4,27 @@ import { useRef, useState } from 'react';
 import { ArtLayers } from './Art';
 import { useReducedMotion, useScrollProgress, clamp01, easeOut } from './hooks';
 
+const KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
 export function EmailCapture() {
   const [email, setEmail] = useState('');
   const [state, setState] = useState('idle');
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    // Stub: wire to the email provider chosen in the commerce plan.
-    setState(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? 'ok' : 'bad');
+    const clean = email.trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)) return setState('bad');
+    setState('sending');
+    try {
+      // Supabase REST insert with the publishable key; RLS allows insert only (supabase/waitlist.sql).
+      const res = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/waitlist`, {
+        method: 'POST',
+        headers: { apikey: KEY, Authorization: `Bearer ${KEY}`, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+        body: JSON.stringify({ email: clean, source: 'teaser' }),
+      });
+      setState(res.ok || res.status === 409 ? 'ok' : 'error'); // 409 = already on the list
+    } catch {
+      setState('error');
+    }
   };
   if (state === 'ok') return <p className="mono" role="status" style={{ marginTop: 32 }}>{copy.teaser.capture.success}</p>;
   return (
@@ -18,9 +32,9 @@ export function EmailCapture() {
       <div className="capture">
         <label htmlFor="email" className="sr-only">Email address</label>
         <input id="email" type="email" className="input" placeholder={copy.teaser.capture.placeholder} value={email} onChange={(e) => setEmail(e.target.value)} aria-invalid={state === 'bad'} aria-describedby="email-msg" autoComplete="email" />
-        <button className="btn btn-primary" type="submit" style={{ whiteSpace: 'nowrap' }}>{copy.teaser.capture.cta}</button>
+        <button className="btn btn-primary" type="submit" disabled={state === 'sending'} style={{ whiteSpace: 'nowrap' }}>{copy.teaser.capture.cta}</button>
       </div>
-      <p id="email-msg" role="status" className="mono" style={{ minHeight: 20 }}>{state === 'bad' ? copy.teaser.capture.error_invalid : copy.teaser.capture.helper}</p>
+      <p id="email-msg" role="status" className="mono" style={{ minHeight: 20 }}>{state === 'bad' ? copy.teaser.capture.error_invalid : state === 'error' ? copy.teaser.capture.error_generic : copy.teaser.capture.helper}</p>
     </form>
   );
 }

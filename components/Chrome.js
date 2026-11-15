@@ -30,12 +30,12 @@ export function Header() {
   return (
     <header className={`header ${!overHero || scrolled ? 'solid' : ''}`}>
       <div className="wrap header-inner">
-        <Link href="/" className="brand"><img src={lockup.src} width={lockup.width} height={lockup.height} alt="Millwork Puzzles" /></Link>
+        <Link href="/preview/" className="brand"><img src={lockup.src} width={lockup.width} height={lockup.height} alt="Millwork Puzzles" /></Link>
         <nav className="nav" aria-label="Primary">
-          <Link href="/editions/quiet-meridian/">Current drop</Link>
-          <Link href="/#archive">Archive</Link>
-          <Link href="/#registry">Collector registry</Link>
-          <Link href="/teaser/">Pre-launch</Link>
+          <Link href="/preview/editions/quiet-meridian/">Current drop</Link>
+          <Link href="/preview/#archive">Archive</Link>
+          <Link href="/preview/#registry">Collector registry</Link>
+          <Link href="/">Pre-launch</Link>
         </nav>
         <div className="header-actions">
           <button className="icon-btn" onClick={() => setSound(!sound)} aria-pressed={sound} aria-label={sound ? 'Mute workshop sound' : 'Turn on workshop sound'}>
@@ -60,8 +60,8 @@ export function Footer() {
         </p>
         <p className="footer-word" aria-hidden="true">Millwork Puzzles</p>
         <div className="footer-grid">
-          <div><span className="mono">Collect</span><Link href="/editions/quiet-meridian/">Current drop</Link><Link href="/#archive">Permanent archive</Link><Link href="/#registry">Register a COA</Link></div>
-          <div><span className="mono">Studio</span><Link href="/#craft">The craft</Link><Link href="/editions/quiet-meridian/#artist">Artists</Link><Link href="/teaser/">Inaugural drop</Link></div>
+          <div><span className="mono">Collect</span><Link href="/preview/editions/quiet-meridian/">Current drop</Link><Link href="/preview/#archive">Permanent archive</Link><Link href="/preview/#registry">Register a COA</Link></div>
+          <div><span className="mono">Studio</span><Link href="/preview/#craft">The craft</Link><Link href="/preview/editions/quiet-meridian/#artist">Artists</Link><Link href="/">Inaugural drop</Link></div>
           <div><span className="mono">Care</span><a href="#">Shipping &amp; returns</a><a href="#">Contact the workshop</a></div>
           <div className="mono" style={{ alignSelf: 'end' }}>© 2026 Millwork Puzzles · {copy.global.domain}</div>
         </div>
